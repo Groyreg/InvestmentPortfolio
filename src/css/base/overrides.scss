@@ -1,0 +1,32 @@
+// V-Select
+.v-select .dropdown-toggle {
+  border: none;
+  background-color: #FFF;
+}
+
+.v-select .dropdown-toggle .clear {
+  position: relative;
+  top: rem(2);
+  margin-right: 10px;
+}
+
+.v-select .vs__actions {
+  padding: 0 rem(15);
+}
+
+.vs__actions {
+  .clear {
+    &:hover {
+      color: $blue-dark;
+    }
+  }
+}
+
+.v-select .open-indicator, .v-select .open-indicator:before {
+  transition: none;
+}
+
+.v-select.open .open-indicator:before {
+  position: relative;
+  top: rem(4);
+}

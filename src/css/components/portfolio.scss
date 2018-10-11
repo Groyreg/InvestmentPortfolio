@@ -1,0 +1,65 @@
+.portfolio {
+  position: relative;
+  padding: rem(30) 0;
+  height: auto;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: $zi-layer-1;
+  }
+  &__container {
+    position: relative;
+    z-index: $zi-layer-2;
+  }
+
+  &__header {
+    @extend .advertisement__header;
+  }
+
+  &__heading {
+    @extend .advertisement__heading;
+    color: #FFF;
+    text-shadow: #e0e0e0 1px 1px 0, 3px 3px 5px rgba(0,0,0,0.51);
+  }
+
+
+  &__list {
+    @extend .advertisement__list;
+  }
+
+  &__item {
+    margin-bottom: rem(30);
+    width: 100%;
+    height: rem(450);
+    border: 2px solid #FFF;
+  }
+
+
+  //  Media Queries
+  @media #{$sm} {
+    &__list {
+      margin-right: rem(-30);
+    }
+
+    &__item {
+      margin-right: rem(30);
+    }
+  }
+
+  @media #{$md} {
+    &__item {
+      width: calc(33.33% - 30px);
+    }
+  }
+}
