@@ -7,14 +7,17 @@
         <h2 class="portfolio__heading">{{ title }}</h2>
       </header>
       <section class="portfolio__list">
-        <template v-if="cards.length">
+        <template v-if="positions.length">
           <div
-            v-for="(card, index) in cards"
+            v-for="(position, index) in positions"
             :key="index"
             class="portfolio__item">
             <card
-              :card="card"
-              :index="index"/>
+              :card="position"
+              :index="index"
+              :state-add="false"
+              :state-adding="false"
+              :state-added="true"/>
           </div>
         </template>
         <div class="portfolio__item">
@@ -29,6 +32,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Card from './includes/card'
 
 export default {
@@ -37,9 +41,13 @@ export default {
   },
   data () {
     return {
-      title: 'Your portfolio',
-      cards: []
+      title: 'Your portfolio'
     }
+  },
+  computed: {
+    ...mapGetters({
+      positions: 'getPositions'
+    })
   }
 }
 </script>

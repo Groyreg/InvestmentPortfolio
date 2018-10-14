@@ -66,4 +66,12 @@
     font-weight: bold;
     letter-spacing: rem(3);
   }
+
+  &__content {
+    display: flex;
+
+    .radio {
+      margin-right: 60px;
+    }
+  }
 }

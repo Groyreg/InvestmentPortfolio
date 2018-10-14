@@ -17,13 +17,15 @@
   "author": "Daniel Cook",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "es6-promise": "^4.2.5",
     "lodash": "^4.17.11",
     "node-sass": "^4.9.3",
     "normalize.css": "^8.0.0",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.19",
